@@ -36,49 +36,50 @@ video {
     filter: saturate(1.8);
     /* Aumenta la saturación un 70% */
     width: 100%;
-    height: clamp(450px, 40vh, 500px);
+    height: clamp(23rem, 60vw, 40rem);
     object-fit: fill;
     top: 0;
     left: 0;
     position: absolute;
-    border-radius: 0  0 15px 15px;
+    border-radius: 0 0 15px 15px;
 }
 
 #menu-icon {
-    width: 120px;
+    width: clamp(8rem, 20vw, 12rem);
     height: auto;
     cursor: pointer;
     position: absolute;
-    top: 10%;
-    right: 10px;
+    top: 5%;
+    right: 0;
 }
 
 .header-content {
     width: 100%;
-    height: clamp(450px, 40vh, 500px);
+    height: clamp(23rem, 60vw, 40rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
-    gap: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hamburguer {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    width: 50px;
+    width: 40px;
     height: auto;
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
+    margin-bottom: 1.5rem;
 }
 
 .hamburguer .bar {
     width: 100%;
-    height: 5px;
-    background-color:var(--navegation);
+    height: 4px;
+    background-color: var(--navegation);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -100,23 +101,23 @@ video {
     list-style: none;
     margin: 0;
     padding: 0;
-   position: fixed;
-    top: 10%;
-    left:-100%;
-    width: 250px;
-    height: 55vh;
+    position: fixed;
+    top: 8%;
+    left: -100%;
+    width: 70%;
+    height: 45vh;
     /*efecto glass*/
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     background: var(--shadow);
     border-right: 1px solid var(--shadow);
-    box-shadow: 4px 0 12px rgba(0,0,0,0.1);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    padding: 70px 30px;
+    gap: 2rem;
+    padding: 1rem 2rem;
     transition: left 0.3s ease;
     z-index: 1000;
 }
@@ -124,7 +125,7 @@ video {
 .nav-menu li a {
     text-decoration: none;
     color: var(--ligth_bgd);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: .2rem 1rem;
     border-radius: 10px;
@@ -135,35 +136,51 @@ video {
 }
 
 .nav-menu li a:hover {
-        border-bottom: 3px solid var(--navegation);
-    }
+    border-bottom: 3px solid var(--navegation);
+}
 
 /* --- Menú visible --- */
 .nav-menu.active {
     left: 0;
 }
 
-@media (min-width: 768px) {  
-    .nav-links{
+@media (min-width: 768px) {
+    .background video {
+        height: clamp(500px, 80vh, 700px);
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+        align-items: center;
+        height: clamp(500px, 80vh, 700px);
+        margin-bottom: 2rem;
+        gap: 7rem;
+        width: 100%;
+    }
+
+    .nav-links {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
+
     .hamburguer {
         display: none;
     }
 
     .nav-menu {
         position: static;
-        height: auto;
         flex-direction: row;
+        flex-wrap: nowrap;
         background: none;
         box-shadow: none;
         border: none;
         padding: 0;
-        gap: 30px;
-        width: auto;
-        right: 0;
+        width: 100%;
+        height: auto;
     }
 
     ul.nav-menu#nav-menu {
@@ -171,10 +188,9 @@ video {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        padding: 1rem;
-        width: 60%;
-
+        gap: 1rem;
+        padding: 1rem .5rem;
+        width: 70%;
     }
 
     .nav-menu li a {
@@ -190,7 +206,22 @@ video {
     }
 
     .nav-menu.active {
-        left: 0; /* no aplica */
+        left: 0;
+        /* no aplica */
+    }
+
+    .preview {
+        padding: 2rem!important;
+        width: 55%!important;
+    }
+
+    .preview p {
+        width: 80%;
+    }
+
+    #menu-icon {
+        top: 18%;
+        right: 18%;
     }
 }
 
@@ -203,13 +234,14 @@ video {
     padding: .8rem;
     background-color: var(--shadow);
     border-radius: 15px;
-    width: fit-content;
-    height: fit-content;
+    width:100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
 .header-content .preview h1 {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
     color: var(--ligth_bgd);
     margin-bottom: 1rem;
     text-align: center;
@@ -217,7 +249,7 @@ video {
 
 .header-content .preview p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(.9rem, 2vw, 1.1rem);
     color: var(--ligth_bgd);
     margin-bottom: 2rem;
     text-align: center;
@@ -232,8 +264,8 @@ video {
 }
 
 .preview .cta button {
-    padding: .8rem .7rem;
-    font-size: clamp(.8rem, 2.5vw, 1.1rem);
+    padding: .7rem;
+    font-size: clamp(.7rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--navegation);
     color: var(--ligth_bgd);
@@ -248,8 +280,8 @@ video {
 }
 
 .cta a#btn-contact {
-    padding: .8rem .7rem;
-    font-size: clamp(.9rem, 2.5vw, 1.1rem);
+    padding: .7rem;
+    font-size: clamp(.7rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
     color: var(--ligth_bgd);
     border: none;
@@ -269,6 +301,180 @@ video {
 }
 
 .cta a#btn-contact i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: green;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding-bottom: .8rem;
+    background-color: var(--smart_blue);
+}
+
+footer .contacto {
+    width: 100%;
+    height: auto;
+    background-color: var(--navegation);
+    color: var(--ligth_bgd);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    bottom: 0;
+    z-index: 5;
+}
+
+.contacto .title {
+    display: none;
+}
+
+.contacto .contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8rem;
+    width: 52%;
+}
+
+.contacto .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8rem;
+    width: 40%;
+}
+
+.contacto .legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.contact-list h3,
+.menu h3,
+.legal h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: .5rem;
+}
+
+.contact-list a,
+.menu a,
+.legal a {
+    text-decoration: none;
+    color: var(--ligth_bgd);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(.8rem, 2vw, 1.1rem);
+    cursor: pointer;
+    text-align: center;
+    padding: .3rem 1rem;
+    border-radius: 10px;
+    border-bottom: 2px solid transparent;
+    z-index: 5;
+}
+
+.contact-list a:hover,
+.menu a:hover {
+    border-bottom: 2px solid var(--ligth_bgd);
+}
+
+.contact-list a i {
+    margin-right: .5rem;
+}
+
+#foot-icon {
+    width: clamp(18rem, 30vw, 20rem);
+    height: auto;
+    cursor: default;
+    z-index: 1;
+    position: absolute;
+    filter: opacity(.1);
+}
+
+footer p,
+footer p a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+    color: var(--ligth_bgd);
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width:768px) {
+    footer .contacto {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding-block: 2rem;
+    }
+
+    .contacto .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+
+    .title a {
+        text-decoration: none;
+        font-family: 'Frank Ruhl Libre', serif;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        color: var(--ligth_bgd);
+        font-weight: 700;
+        cursor: pointer
+    }
+
+    .contacto .contact-list,
+    .contacto .menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 20%;
+        padding-inline: 2rem;
+    }
+
+    .contacto .legal {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-inline: 2rem;
+        margin: 0;
+    }
+
+    .contact-list a,
+    .menu a {
+        padding: .3rem 1rem;
+        border-radius: 10px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .contact-list a:hover,
+    .menu a:hover {
+        border-bottom: 2px solid var(--ligth_bgd);
+    }
+
+    #foot-icon {
+        left: 12%;
+    }
+
 }
