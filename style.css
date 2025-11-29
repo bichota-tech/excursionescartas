@@ -104,8 +104,8 @@ video {
     position: fixed;
     top: 8%;
     left: -100%;
-    width: 70%;
-    height: 45vh;
+    width: 60%;
+    height: 40vh;
     /*efecto glass*/
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -116,7 +116,7 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem 2rem;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -190,7 +190,7 @@ video {
         align-items: center;
         gap: 1rem;
         padding: 1rem .5rem;
-        width: 70%;
+        width: auto;
     }
 
     .nav-menu li a {
