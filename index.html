@@ -18,15 +18,20 @@
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <link rel="manifest" href="favicon/site.webmanifest" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
         <link rel="stylesheet" href="style.css">
-        <title>Excursiones Académicas</title>
+        <title>Excursiones Cartas</title>
     </head>
 
     <body>
         <header>
+
             <div class="background">
                 <video autoplay muted loop>
-                    <source src="videos/header-video.mp4" type="video/mp4">
+                    <source src="video/utrecht_background.mp4" type="video/mp4">
                     <img src="img/backup_views.png" alt="Vista panoramica de los Países Bajos"
                         title="Vista panoramica de los Países Bajos">
                     Tu navegador no soporta la etiqueta de video.
@@ -34,24 +39,49 @@
             </div>
 
             <div class="header-content">
-                <h1>Excursiones Académicas a los Países Bajos</h1>
-                <p>Descubre los Países Bajos a través de nuestras excursiones académicas diseñadas para estudiantes.</p>
-                <button type="button">Planificar excursión</button>
-            </div>
+                <div class="nav-links">
+                    <button class="hamburguer" id="hamburguer" aria-label="Abrir menú de navegación"
+                        aria-expanded="false" aria-controls="nav-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
 
-            <div class="nav-links">
-                <a href="#home">Inicio</a>
-                <a href="#about">Sobre Mí</a>
-                <a href="#tours">Tours</a>
-                <a href="#vlog">Vlog</a>
-                <a href="#contact">Contacto</a>
-            </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="tel:+34640947912" id="btn-contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                </svg>
+                                Llámanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="img/menu-icon.png" alt="bandera de los Países Bajos" title="bandera de los Países Bajos"
+                    id="menu-icon">
+                <div class="preview">
+                    <h1>Excursiones Académicas <br>a los Países Bajos</h1>
+                    <p>Descubre los Países Bajos a través de nuestras excursiones académicas diseñadas para
+                        estudiantes.</p>
+                    <div class="cta">
+                        <button>Ver Excursiones</button>
+                        <a href="https://wa.me/640947912" id="btn-contact">
+                            <i class="bi bi-whatsapp"></i>Enviar Mensaje
+                        </a>
+                    </div>
+                </div>
 
+            </div>
         </header>
         <main>
             <section class="home-section" id="home">
                 <div class="homecontainer">
-
                     <div class="card-list">
                         <div class="card-icon">
                             <i class="bi bi-compass"></i>
@@ -72,13 +102,19 @@
                             <i class="bi bi-compass"></i>
                             <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio cultural,</span>
                         </div>
+                        <div class="cta">
+                            <button type="button">Ver Excursiones</button>
+                            <a href="tel:+34640947912">
+                                <i class="bi bi-telephone-fill"></i>+34 640947912
+                            </a>
+                        </div>
                     </div>
 
                     <div class="img-right">
                         <img src="img/excursion_students.jpg" alt="Estudiantes en una excursión académica"
                             title="Estudiantes en una excursión académica">
                     </div>
-                    
+
                     <div class="circle exp">
                         <span>20</span>
                         <span>Años de Experiencia</span>
@@ -88,34 +124,197 @@
             </section>
 
             <section class="about-section" id="about">
-                <h2>Historiadora del Arte con experiencia en museología, gestión del patrimonio y cultura</h2>
-                <p>Soy Yanetsis Cartas Álvarez, una apasionada historiadora del arte con amplia experiencia en
-                    museología,
-                    gestión del patrimonio y cultura. Mi objetivo es brindar a los estudiantes experiencias educativas
-                    enriquecedoras a través de excursiones académicas bien planificadas y guiadas por expertos
-                    bilingües.
-                </p>
-                <p>
-                    Conozco a fondo los Países Bajos y su patrimonio cultural, lo que me permite diseñar itinerarios que
-                    combinan aprendizaje y diversión. Mi compromiso es asegurar que cada excursión sea una experiencia
-                    inolvidable para todos los participantes.
-                </p>
+                <div class="aboutcontainer">
+                    <div class="img-left">
+                        <h2>Sobre mí</h2>
+                        <img src="img/excursion_students.jpg" alt="Perfil de Yanetsis" title="Perfil de Yanetsis">
+                    </div>
+
+                    <div class="information">
+                        <div class="fullname">
+                            <h3>Yanetsis Cartas Álvarez</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quod itaque
+                                molestias
+                                cupiditate voluptatibus nam corrupti beatae, velit consequuntur aspernatur provident
+                                minus
+                                nihil vero explicabo animi vitae voluptatum, perspiciatis aliquid.</p>
+                        </div>
+                        <div class="cicle exp">
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                            <div class="circle">
+                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                            </div>
+                        </div>
+                        <div class="cta">
+                            <a href="tel:+34640947912" id="btn-contact">
+                                <i class="bi bi-telephone-fill"></i>+34 640947912
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clients">
+                    <div class="info">
+                        <h3>¿A quiénes va dirigido?</h3>
+                        <div class="card-list">
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Brindar a los estudiantes una experiencia práctica e inmersiva.</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Ciudades con un rico patrimonio histórico y cultural. Ideal para excursiones
+                                    académicas.
+                                </span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Recorridos con guías bilingües expertos en historia del arte y cultura
+                                    neerlandesa.</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio
+                                    cultural,</span>
+                            </div>
+                        </div>
+                        <div class="cta">
+                            <a href="tel:+34640947912" id="btn-contact">
+                                <i class="bi bi-telephone-fill"></i>+34 640947912
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="img-rigth-gid">
+                        <img src="img/excursion_students.jpg" id="topleft" alt="Imagen decorativa de estudiantes"
+                            title="Imagen decorativa de estudiantes">
+                        <img src="img/excursion_students.jpg" id="toprigth" alt="Imagen decorativa de estudiantes"
+                            title="Imagen decorativa de estudiantes">
+                        <img src="img/excursion_students.jpg" id="bottomleft" alt="Imagen decorativa de estudiantes"
+                            title="Imagen decorativa de estudiantes">
+                        <img src="img/excursion_students.jpg" id="bottomigth" alt="Imagen decorativa de estudiantes"
+                            title="Imagen decorativa de estudiantes">
+                    </div>
+                </div>
             </section>
-            <section class="tours-section" id="tours">
-                <h2>Actividades Educativas</h2>
-                <p>Además de las visitas guiadas, ofrecemos una variedad de actividades educativas que complementan el
-                    aprendizaje, incluyendo talleres, debates y proyectos colaborativos.</p>
-            </section>
-            <section class="contact-section" id="contact">
-                <h2>Contáctanos</h2>
-                <p>Para más información sobre nuestras excursiones académicas, no dudes en contactarnos a través de
-                    nuestro correo electrónico o número de teléfono.</p>
+
+            <section class="services-section" id="services">
+                <h2>Servicios</h2>
+                <p>Las actividades incluyen:</p>
+                <div class="cicle activity">
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                    <div class="circle">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, ullam?</span>
+                    </div>
+                </div>
+
+                <div class="whyus">
+                    <div class="info">
+                        <h3>¿Por qué elegir nuestros servicios?</h3>
+                        <div class="card-list">
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Brindar a los estudiantes una experiencia práctica e inmersiva.</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Ciudades con un rico patrimonio histórico y cultural. Ideal para excursiones
+                                    académicas.
+                                </span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Recorridos con guías bilingües expertos en historia del arte y cultura
+                                    neerlandesa.</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio
+                                    cultural,</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio
+                                    cultural,</span>
+                            </div>
+                            <div class="card-icon">
+                                <i class="bi bi-bookmark-check-fill"></i>
+                                <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio
+                                    cultural,</span>
+                            </div>
+                        </div>
+                        <div class="cta">
+                            <a href="tel:+34640947912" id="btn-contact">
+                                <i class="bi bi-telephone-fill"></i>+34 640947912
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="img-right">
+                        <img src="img/excursion_students.jpg" alt="Perfil de Yanetsis" title="Perfil de Yanetsis">
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
-            <p>&copy;Excursiones Académicas. Todos los derechos reservados.</p>
-        </footer>
+            <div class="contacto">
+                <div class="contact-list">
+                    <h3>Contacto</h3>
+                    <a href="tel:+34640947912">
+                        <i class="bi bi-telephone-fill"></i>+34 640947912
+                    </a>
+                    <a href="mailto:adalvarez2021@gmail.com">
+                        <i class="bi bi-envelope-fill"></i>adalvarez2021@gmail.com
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-linkedin"></i>LinkedIn
+                    </a>
+                </div>
 
+                <div class="menu">
+                    <h3>Menú</h3>
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Sobre Mí</a>
+                    <a href="#services">Servicios</a>
+                    <a href="#blog">Blog</a>
+                </div>
+
+                <div class="legal">
+                    <h3>Legal</h3>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+            <p>&copy;Excursiones Académicas. Diseñado y desarrollado por <a href="#">ACMA</a>.</p>
+        </footer>
+        <script src="script.js"></script>
     </body>
 
 </html>
