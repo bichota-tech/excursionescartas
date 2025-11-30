@@ -2,7 +2,8 @@
    VARIABLES GLOBALES — configuración rápida
    =========================================== */
 :root {
-    --slide-speed: 0.9s;       /* duración de cada animación */
+    --slide-speed: 0.9s; 
+    --stamp-speed:.9s;      /* duración de cada animación */
     --slide-ease: ease-out;
     --slide-opacity: 0;
 
@@ -96,3 +97,31 @@
         opacity: 1;
     }
 }
+
+/* ===============================
+   EFECTO CUÑO / SELLO CORPORATIVO
+   =============================== */
+
+.stamp {
+    animation: stampIn var(--stamp-speed, 0.9s) cubic-bezier(0.25, 0.75, 0.35, 1.2) both;
+}
+
+
+/* Keyframes del cuño */
+@keyframes stampIn {
+    0% {
+        transform: scale(0) rotate(-10deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.15) rotate(2deg);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95) rotate(-1deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
