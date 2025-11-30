@@ -1,0 +1,98 @@
+/* ===========================================
+   VARIABLES GLOBALES — configuración rápida
+   =========================================== */
+:root {
+    --slide-speed: 0.9s;       /* duración de cada animación */
+    --slide-ease: ease-out;
+    --slide-opacity: 0;
+
+    --stagger-step: 0.15s;     /* separación entre elementos */
+}
+
+/* ===========================================
+   SISTEMA DE STAGGER AUTOMÁTICO
+   Se aplica a cualquier contenedor con .stagger
+   =========================================== */
+
+.stagger > * {
+    animation-delay: calc(var(--stagger-step) * var(--i, 0));
+}
+
+/* Genera índices automáticos para los hijos */
+.stagger > *:nth-child(1) { --i: 0; }
+.stagger > *:nth-child(2) { --i: 1; }
+.stagger > *:nth-child(3) { --i: 2; }
+.stagger > *:nth-child(4) { --i: 3; }
+.stagger > *:nth-child(5) { --i: 4; }
+.stagger > *:nth-child(6) { --i: 5; }
+.stagger > *:nth-child(7) { --i: 6; }
+.stagger > *:nth-child(8) { --i: 7; }
+.stagger > *:nth-child(9) { --i: 8; }
+.stagger > *:nth-child(10) { --i: 9; }
+
+/*añade hijos segun se necesite */
+
+
+/* ===========================================
+   ANIMACIONES (fade + slide)
+   =========================================== */
+
+/* ---- Derecha → Origen ---- */
+.slide-right {
+    animation: slideRight var(--slide-speed) var(--slide-ease) both;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(100%);
+        opacity: var(--slide-opacity);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ---- Izquierda → Origen ---- */
+.slide-left {
+    animation: slideLeft var(--slide-speed) var(--slide-ease) both;
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: var(--slide-opacity);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ---- Arriba → Origen ---- */
+.slide-top {
+    animation: slideTop var(--slide-speed) var(--slide-ease) both;
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: var(--slide-opacity);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ---- Abajo → Origen ---- */
+.slide-bottom {
+    animation: slideBottom var(--slide-speed) var(--slide-ease) both;
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: var(--slide-opacity);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

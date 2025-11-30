@@ -22,7 +22,8 @@
             @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animation.css">
         <title>Excursiones Cartas</title>
     </head>
 
@@ -82,44 +83,48 @@
         <main>
             <section class="home-section" id="home">
                 <div class="homecontainer">
-                    <div class="card-list">
-                        <div class="card-icon">
-                            <i class="bi bi-compass"></i>
-                            <span>Brindar a los estudiantes una experiencia práctica e inmersiva.</span>
-                        </div>
-                        <div class="card-icon">
+                    <div class="card-list stagger">
+
+                        <div class="card-icon diagfirst slide-top">
                             <i class="bi bi-compass"></i>
                             <span>Ciudades con un rico patrimonio histórico y cultural. Ideal para excursiones
                                 académicas.
                             </span>
                         </div>
-                        <div class="card-icon">
+                        <div class="card-icon diagsecond slide-right">
                             <i class="bi bi-compass"></i>
                             <span>Recorridos con guías bilingües expertos en historia del arte y cultura
                                 neerlandesa.</span>
                         </div>
-                        <div class="card-icon">
+                        <div class="card-icon diagsecond slide-left">
                             <i class="bi bi-compass"></i>
-                            <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio cultural,</span>
+                            <span>Exploración de arquitecturas, museos, arte contemporáneo y patrimonio cultural.</span>
+                        </div>
+                        <div class="card-icon diagfirst slide-bottom">
+                            <i class="bi bi-compass"></i>
+                            <span>Brindar a los estudiantes una experiencia práctica e inmersiva.</span>
                         </div>
                         <div class="cta">
                             <button type="button">Ver Excursiones</button>
-                            <a href="tel:+34640947912">
+                            <a href="tel:+34640947912" id="btn-contact">
                                 <i class="bi bi-telephone-fill"></i>+34 640947912
                             </a>
                         </div>
+
                     </div>
 
                     <div class="img-right">
-                        <img src="img/excursion_students.jpg" alt="Estudiantes en una excursión académica"
-                            title="Estudiantes en una excursión académica">
+                        <img src="img/estudiantes abrazados.jpg" id="homepic" class="diagfirst"
+                            alt="Estudiantes en una excursión académica" title="Estudiantes en una excursión académica">
+
                     </div>
 
-                    <div class="circle exp">
-                        <span>20</span>
-                        <span>Años de Experiencia</span>
+                    <div class="circle-exp slide-right ">
+                        <div class="exp">
+                            <span id="number">+ 18</span>
+                            <span id="phrase">Años de Experiencia</span>
+                        </div>
                     </div>
-
                 </div>
             </section>
 
@@ -289,7 +294,7 @@
                     id="foot-icon">
                 <div class="title">
                     <a href="#index.html">
-                    Excursiones Académicas <br>a los Países Bajos
+                        Excursiones Académicas <br>a los Países Bajos
                     </a>
 
                 </div>
