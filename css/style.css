@@ -156,7 +156,7 @@ video {
         align-items: center;
         height: clamp(500px, 80vh, 700px);
         margin-bottom: 2rem;
-        gap: 7rem;
+        gap: 4rem;
         width: 100%;
     }
 
@@ -225,7 +225,6 @@ video {
     }
 }
 
-
 .preview {
     display: flex;
     flex-direction: column;
@@ -265,7 +264,7 @@ video {
 
 .cta button {
     padding: .7rem;
-    font-size: clamp(.7rem, 2vw, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--navegation);
     color: var(--ligth_bgd);
@@ -281,7 +280,7 @@ video {
 
 .cta a#btn-contact {
     padding: .7rem;
-    font-size: clamp(.7rem, 2vw, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
     color: var(--ligth_bgd);
     border: none;
@@ -529,21 +528,21 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     gap: .7rem;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
 .card-list .card-icon {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: initial;
     align-items: center;
     text-align: center;
-    gap: .7rem;
-    width: clamp(9rem, 15vw, 12rem);
-    min-height: clamp(11rem, 20vw, 14rem);
+    width: auto;
+    min-height: 12rem;
+    gap: 1rem;
     background-color: var(--smart_blue);
-    padding: 1rem;
+    padding: 1.5rem;
     shape-outside: circle;
 }
 
@@ -554,7 +553,7 @@ h3 {
 
 .card-icon span {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(.8rem, 2vw, 1rem);
+    font-size: clamp(.9rem, 2vw, 1.2rem);
     color: var(--ligth_bgd);
 }
 
@@ -633,24 +632,14 @@ span#phrase {
 
 /*About Section Mobile*/
 
-.about-section .aboutcontainer{
+.about-section .aboutcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     width: 100%;
     height: auto;
-}
-
-.img-left {
-    margin-bottom: 1.5rem;
-    background-image: url(../img/profilepic.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 80%;
-    height: 50vh;
+    gap: 1.5rem;
 }
 
 .aboutcontainer .information {
@@ -659,9 +648,85 @@ span#phrase {
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: -1;
-    position: relative;
-    padding-top: 10rem;
-    padding-bottom: 2rem;
-    background-color: var(--atomic);
+    width: 100%;
+    height: auto;
 }
+
+.img-left {
+    background-image: url(../img/profilepic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 55vh;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.information .fullname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--atomic);
+    border-radius: 50% 0 40%;
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+    z-index: 1;
+    position: relative;
+    margin-top: -55%;
+    margin-bottom: 1.5rem;
+    width: 90%;
+}
+
+.fullname h3 {
+    color: var(--ligth_bgd);
+    margin-top: 4rem;
+}
+
+.fullname p {
+    width: 70%;
+    color: var(--ligth_bgd);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutcontainer .circle-about {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    gap: .7rem;
+}
+
+.circle-about .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--smart_blue);
+    border-radius: 50%;
+    width: clamp(10rem, 20vw, 16rem);
+    height: clamp(10rem, 20vw, 16rem);
+}
+
+.circle .textcircle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .8rem;
+    border-radius: 50%;
+    padding: .6rem;
+    width: clamp(9rem, 20vw, 14rem);
+    height: clamp(9rem, 20vw, 14rem);
+    background-color: var(--smart_blue);
+    color: var(--ligth_bgd);
+}
+
+
+
