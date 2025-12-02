@@ -259,7 +259,7 @@ video {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: .8rem;
+    gap: .7rem;
 }
 
 .cta button {
@@ -279,7 +279,7 @@ video {
 }
 
 .cta a#btn-contact {
-    padding: .7rem;
+    padding: .5rem;
     font-size: clamp(.9rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
     color: var(--ligth_bgd);
@@ -497,18 +497,19 @@ h2 {
 
 h3 {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
+    font-weight: 700;
     color: var(--navegation);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .diagfirst {
-    border-radius: 35% 0;
+    border-radius: 50% 0;
 }
 
 .diagsecond {
-    border-radius: 0 35%;
+    border-radius: 0 50%;
 }
 
 /*Home Section Mobile*/
@@ -523,31 +524,35 @@ h3 {
     height: auto;
 }
 
-.homecontainer .card-list {
+.card-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: .7rem;
-    width: 100%;
-    height: auto;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .card-list .card-icon {
     display: flex;
     flex-direction: column;
-    justify-content: initial;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    width: auto;
-    min-height: 12rem;
-    gap: 1rem;
     background-color: var(--smart_blue);
     padding: 1.5rem;
-    shape-outside: circle;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
 }
 
 .card-icon i {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
     color: var(--ligth_bgd);
 }
 
@@ -555,17 +560,22 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(.9rem, 2vw, 1.2rem);
     color: var(--ligth_bgd);
+    line-height: 1.5;
+    display: block;
 }
 
 .card-list .cta {
     margin-block: 1.5rem;
-    grid-column: 1 / 3;
-    justify-self: center;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .card-list .cta a#btn-contact {
     color: var(--text_primary);
     font-weight: 500;
+    border: 3px solid var(--navegation);
 }
 
 .card-list .cta a#btn-contact:hover {
@@ -632,14 +642,25 @@ span#phrase {
 
 /*About Section Mobile*/
 
-.about-section .aboutcontainer {
+.about-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    gap: 1.5rem;
+    gap: 2rem;
+}
+
+.about-section .aboutcontainer,
+.about-section .clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
 }
 
 .aboutcontainer .information {
@@ -648,19 +669,19 @@ span#phrase {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 2rem;
     width: 100%;
     height: auto;
 }
 
 .img-left {
     background-image: url(../img/profilepic.jpg);
-    background-position: center;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 80%;
-    height: 55vh;
+    width: 90%;
+    height: 50vh;
     z-index: 2;
-    margin-bottom: 2rem;
 }
 
 .information .fullname {
@@ -670,63 +691,120 @@ span#phrase {
     align-items: center;
     text-align: center;
     background-color: var(--atomic);
-    border-radius: 50% 0 40%;
     padding-top: 12rem;
     padding-bottom: 3rem;
     z-index: 1;
     position: relative;
-    margin-top: -55%;
-    margin-bottom: 1.5rem;
-    width: 90%;
+    margin-top: -50%;
+    width: 100%;
 }
 
 .fullname h3 {
     color: var(--ligth_bgd);
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .fullname p {
-    width: 70%;
+    width: 75%;
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
-.aboutcontainer .circle-about {
-    border: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    place-items: center;
+.aboutcontainer .cta a#btn-contact {
+    color: var(--text_primary);
+    font-weight: 500;
+    border: 3px solid var(--navegation);
+}
+
+.aboutcontainer .cta a#btn-contact:hover {
+    color: var(--ligth_bgd);
+}
+
+.clients .card-list {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    gap: .7rem;
-}
-
-.circle-about .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed var(--smart_blue);
-    border-radius: 50%;
-    width: clamp(10rem, 20vw, 16rem);
-    height: clamp(10rem, 20vw, 16rem);
-}
-
-.circle .textcircle{
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: .8rem;
-    border-radius: 50%;
-    padding: .6rem;
-    width: clamp(9rem, 20vw, 14rem);
-    height: clamp(9rem, 20vw, 14rem);
-    background-color: var(--smart_blue);
-    color: var(--ligth_bgd);
+    gap: 0;
 }
 
+.clients .card-icon {
+    width: 100%;
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: transparent;
+    text-align: left;
 
+}
 
+.clients .card-icon i {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 50%;
+    background-color: var(--navegation);
+    padding: .8rem;
+    margin: 0;
+}
+
+.clients .card-icon span {
+    color: var(--text_primary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.clients .cta a#btn-contact {
+    color: var(--text_primary);
+    font-weight: 600;
+    border: 3px solid var(--navegation);
+}
+
+.clients .img-rigth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: .5rem;
+    border-radius: 12%;
+    border: 3px dashed var(--navegation);
+}
+
+.img-rigth-grid .rigth-grid {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+img.slide {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* Ajusta como background */
+    object-position: center;
+    /* Centra la imagen */
+    align-items: center;
+}
+
+.imgtop{
+    border-radius: 30% 0;
+}
+
+.imgbottom{
+    border-radius: 0 30%;
+}
