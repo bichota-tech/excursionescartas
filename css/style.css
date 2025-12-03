@@ -1,5 +1,5 @@
 :root {
-    --cta_accent: #F31F2A;
+    --cta_accent: #962d32;
     --ligth_bgd: white;
     --navegation: #003087;
     --shadow: #0f0f0f9a;
@@ -701,7 +701,7 @@ span#phrase {
 
 .fullname h3 {
     color: var(--ligth_bgd);
-    
+
 }
 
 .fullname p {
@@ -769,6 +769,10 @@ span#phrase {
     border: 3px solid var(--navegation);
 }
 
+.clients .cta a#btn-contact:hover {
+    color: var(--ligth_bgd);
+}
+
 .clients .img-rigth-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -780,7 +784,7 @@ span#phrase {
     margin: 0 auto;
     padding: .5rem;
     border-radius: 12%;
-    border: 3px dashed var(--navegation);
+    border: 3px dashed var(--atomic);
 }
 
 .img-rigth-grid .rigth-grid {
@@ -801,10 +805,103 @@ img.slide {
     align-items: center;
 }
 
-.imgtop{
+.imgtop {
     border-radius: 30% 0;
 }
 
-.imgbottom{
+.imgbottom {
     border-radius: 0 30%;
 }
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    position: relative;
+}
+
+.services-section .backflayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/backup_views.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(10px 10px 5px #0f0f0f5b);
+}
+
+.services-section .activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background-color: #0f0f0f5b;
+}
+
+.activity h3 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.activity h4 {
+    color: var(--ligth_bgd);
+    font-family: 'Montserrat', sans-serif;
+    margin-block: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    
+}
+
+div.plane{
+    position: absolute;
+    top: 8%;
+    right:25%;
+    transform: translateY(-50%); /* centra en vertical */
+    width: 80%;
+}
+
+img#plane{
+    width: 100%;
+    height: auto;
+}
+
+.activity .actinfo {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+i{
+    color: var(--atomic);
+    font-size: 1.2rem;
+    
+}
+
+
+.actinfo .info span{
+    color: var(--ligth_bgd);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
