@@ -156,7 +156,7 @@ video {
         align-items: center;
         height: clamp(500px, 80vh, 700px);
         margin-bottom: 2rem;
-        gap: 4rem;
+        gap: 2.5rem;
         width: 100%;
     }
 
@@ -211,7 +211,6 @@ video {
     }
 
     .preview {
-        padding: 2rem !important;
         width: 55% !important;
     }
 
@@ -278,7 +277,7 @@ video {
     transform: scale(1.1);
 }
 
-.cta a#btn-contact {
+.preview .cta a#btn-contact {
     padding: .5rem;
     font-size: clamp(.9rem, 2vw, 1.1rem);
     font-family: 'Montserrat', sans-serif;
@@ -294,12 +293,12 @@ video {
     transition: transform ease-in-out .3s;
 }
 
-.cta a#btn-contact:hover {
+.preview .cta a#btn-contact:hover {
     background-color: var(--navegation);
     transform: scale(1.1);
 }
 
-.cta a#btn-contact i {
+.preview .cta a#btn-contact i {
     font-size: 1rem;
     color: green;
 }
@@ -519,7 +518,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     height: auto;
 }
@@ -531,7 +530,7 @@ h3 {
     align-items: start;
     align-content: start;
     gap: 1rem;
-    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -551,8 +550,8 @@ h3 {
 }
 
 .card-icon i {
-    font-size: clamp(2.2rem, 5vw, 3rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: .8rem;
     color: var(--ligth_bgd);
 }
 
@@ -564,22 +563,37 @@ h3 {
     display: block;
 }
 
-.card-list .cta {
+.cta {
     margin-block: 1.5rem;
-    grid-column: span 2;
+    grid-column: 1 / 3;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    gap: 1rem;
 }
 
-.card-list .cta a#btn-contact {
+.cta a#btn-contact {
     color: var(--text_primary);
     font-weight: 500;
     border: 3px solid var(--navegation);
+    border-radius: 15px;
+    padding: .5rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: clamp(.9rem, 2vw, 1.1rem);
+    transition: transform ease-in-out .3s;
 }
 
-.card-list .cta a#btn-contact:hover {
+.cta a#btn-contact:hover {
+    background-color: var(--navegation);
     color: var(--ligth_bgd);
+    transform: scale(1.1);
+}
+
+.cta a#btn-contact i {
+    color: green;
+    margin-right: .5rem;
 }
 
 img#homepic.diagfirst {
@@ -639,6 +653,33 @@ span#phrase {
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
 }
+
+/*Home Section Desktop*/
+
+@media (min-width:768px) {
+    .home-section .homecontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .card-list {
+        margin-inline: 0;
+        width: 50%;
+    }
+
+    .img-right.diagfirst {
+        width: 40%;
+        height: 90vh;
+    }
+
+
+}
+
 
 /*About Section Mobile*/
 
@@ -711,16 +752,6 @@ span#phrase {
     font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
-.aboutcontainer .cta a#btn-contact {
-    color: var(--text_primary);
-    font-weight: 500;
-    border: 3px solid var(--navegation);
-}
-
-.aboutcontainer .cta a#btn-contact:hover {
-    color: var(--ligth_bgd);
-}
-
 .clients .card-list {
     width: 100%;
     height: auto;
@@ -762,16 +793,6 @@ span#phrase {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
 
-.clients .cta a#btn-contact {
-    color: var(--text_primary);
-    font-weight: 600;
-    border: 3px solid var(--navegation);
-}
-
-.clients .cta a#btn-contact:hover {
-    color: var(--ligth_bgd);
-}
-
 .clients .img-rigth-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -811,6 +832,26 @@ img.slide {
 .imgbottom {
     border-radius: 0 30%;
 }
+
+/*About Section Desktop*/
+
+@media (min-width:768px) {
+    .aboutcontainer .information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+
+}
+
+
 
 /* Service Section Mobile */
 
@@ -892,8 +933,8 @@ img#plane {
     align-items: center;
     text-align: center;
     gap: 1rem;
-    background-color:#0f0f0f5b;
-    border-radius: 15px; 
+    background-color: #0f0f0f5b;
+    border-radius: 15px;
 }
 
 .actinfo .info {
@@ -902,7 +943,7 @@ img#plane {
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    
+
 }
 
 i#ico {
@@ -920,48 +961,42 @@ i#ico {
     font-weight: 600;
 }
 
-.explain h3{
+.explain h3 {
     margin-bottom: 2rem;
 }
 
-.card-icon h4{
+.card-icon h4 {
     color: var(--ligth_bgd);
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: .5rem;
 }
 
-.card-icon p{
+.card-icon p {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
     font-size: .9rem;
 }
 
-.explain .cta{
+.explain .cta {
     margin-block: 2rem;
 }
 
-.explain .cta a#btn-contact{
-    color: var(--text_primary);
-    font-weight: 600;
-    border: 3px solid var(--navegation);
-}
-
-.explain .cta a#btn-contact:hover{
-    color: var(--ligth_bgd);
-}
-
-.whyus .img-right{
-    width: 100%;
+.whyus .img-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
 }
 
 /* Estilos para el botón flotante de WhatsApp */
 
-.floatbuttom a#whatsapp{
-    text-decoration: none; 
+.floatbuttom a#whatsapp {
+    text-decoration: none;
 }
 
-.floatbuttom a#whatsapp i{
+.floatbuttom a#whatsapp i {
     font-size: 2rem;
     padding: .5rem;
     border-radius: 100%;
@@ -970,31 +1005,28 @@ i#ico {
 }
 
 .whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px; 
-  left: 10px;
-  background-color: rgba(0, 128, 0, 0.685); 
-  color: var(--ligth_bgd);
-  border-radius: 50%;
-  text-align: center;
-  font-size: 2.3rem; 
-  box-shadow: 2px 2px 3px var(--shadow); 
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 10px;
+    background-color: rgba(0, 128, 0, 0.685);
+    color: var(--ligth_bgd);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.3rem;
+    box-shadow: 2px 2px 3px var(--shadow);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-float:hover {
-  background-color: darkgreen; 
+    background-color: darkgreen;
 }
 
 .whatsapp-icon {
-  margin: 0;
+    margin: 0;
 }
-
-
-
