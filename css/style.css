@@ -745,7 +745,6 @@ span#phrase {
     padding: 1rem;
     background-color: transparent;
     text-align: left;
-
 }
 
 .clients .card-icon i {
@@ -784,7 +783,7 @@ span#phrase {
     margin: 0 auto;
     padding: .5rem;
     border-radius: 12%;
-    border: 3px dashed var(--atomic);
+    border: 2px dashed var(--atomic);
 }
 
 .img-rigth-grid .rigth-grid {
@@ -813,6 +812,8 @@ img.slide {
     border-radius: 0 30%;
 }
 
+/* Service Section Mobile */
+
 .services-section {
     display: flex;
     flex-direction: column;
@@ -835,6 +836,7 @@ img.slide {
     background-size: cover;
     width: 100%;
     height: auto;
+    margin-bottom: 1rem;
     filter: drop-shadow(10px 10px 5px #0f0f0f5b);
 }
 
@@ -863,18 +865,19 @@ img.slide {
     font-size: 1.2rem;
     width: 100%;
     text-align: center;
-    
+
 }
 
-div.plane{
+div.plane {
     position: absolute;
     top: 8%;
-    right:25%;
-    transform: translateY(-50%); /* centra en vertical */
+    right: 25%;
+    transform: translateY(-50%);
+    /* centra en vertical */
     width: 80%;
 }
 
-img#plane{
+img#plane {
     width: 100%;
     height: auto;
 }
@@ -889,19 +892,109 @@ img#plane{
     align-items: center;
     text-align: center;
     gap: 1rem;
+    background-color:#0f0f0f5b;
+    border-radius: 15px; 
 }
 
-i{
-    color: var(--atomic);
-    font-size: 1.2rem;
+.actinfo .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
     
 }
 
+i#ico {
+    color: var(--ligth_bgd);
+    font-size: 1.2rem;
+    background-color: #FF773F;
+    border-radius: 50%;
+    padding: .3rem;
 
-.actinfo .info span{
+}
+
+.actinfo .info p {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
+
+.explain h3{
+    margin-bottom: 2rem;
+}
+
+.card-icon h4{
+    color: var(--ligth_bgd);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: .5rem;
+}
+
+.card-icon p{
+    color: var(--ligth_bgd);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+}
+
+.explain .cta{
+    margin-block: 2rem;
+}
+
+.explain .cta a#btn-contact{
+    color: var(--text_primary);
+    font-weight: 600;
+    border: 3px solid var(--navegation);
+}
+
+.explain .cta a#btn-contact:hover{
+    color: var(--ligth_bgd);
+}
+
+.whyus .img-right{
+    width: 100%;
+}
+
+/* Estilos para el botón flotante de WhatsApp */
+
+.floatbuttom a#whatsapp{
+    text-decoration: none; 
+}
+
+.floatbuttom a#whatsapp i{
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: 100%;
+    background-color: rgba(0, 128, 0, 0.596);
+    color: var(--ligth_bgd);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px; 
+  left: 10px;
+  background-color: rgba(0, 128, 0, 0.685); 
+  color: var(--ligth_bgd);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.3rem; 
+  box-shadow: 2px 2px 3px var(--shadow); 
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: darkgreen; 
+}
+
+.whatsapp-icon {
+  margin: 0;
+}
+
 
 
