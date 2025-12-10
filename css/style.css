@@ -698,8 +698,6 @@ span#phrase {
     .circle-exp{
         right: -40%;
     }
-
-
 }
 
 
@@ -881,9 +879,25 @@ img.slide {
         width: 50%;
         margin: 0;
         padding-block: 6.5rem;
-
     }
 
+    .clients .card-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clients .card-list .card-icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clients .card-list .card-icon span{
+        text-align: center;
+    }
 
 
 }
