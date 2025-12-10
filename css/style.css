@@ -1,11 +1,11 @@
 :root {
     --cta_accent: #962d32;
     --ligth_bgd: white;
-    --navegation: #003087;
+    --navegation: #003380;
     --shadow: #0f0f0f9a;
     --text_primary: #212121;
     --text_secondary: #757575;
-    --smart_blue: #3966B1;
+    --smart_blue: #0b4ac1;
     --atomic: #FF773F;
 }
 
@@ -102,7 +102,7 @@ video {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 8%;
+    top: 9%;
     left: -100%;
     width: 60%;
     height: 40vh;
@@ -212,6 +212,8 @@ video {
 
     .preview {
         width: 55% !important;
+        gap: 1.5rem;
+        padding: 2rem !important;
     }
 
     .preview p {
@@ -247,7 +249,7 @@ video {
 
 .header-content .preview p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(.9rem, 2vw, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.5rem);
     color: var(--ligth_bgd);
     text-align: center;
 }
@@ -263,7 +265,7 @@ video {
 
 .cta button {
     padding: .7rem;
-    font-size: clamp(.9rem, 2vw, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.5rem);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--navegation);
     color: var(--ligth_bgd);
@@ -278,11 +280,11 @@ video {
 }
 
 .preview .cta a#btn-contact {
-    padding: .5rem;
-    font-size: clamp(.9rem, 2vw, 1.1rem);
+    padding: .6rem;
+    font-size: clamp(.9rem, 2vw, 1.5rem);
     font-family: 'Montserrat', sans-serif;
     color: var(--ligth_bgd);
-    border: none;
+    border: 2px solid var(--navegation);
     border-radius: 15px;
     text-decoration: none;
     display: flex;
@@ -496,7 +498,7 @@ h2 {
 
 h3 {
     font-family: 'Frank Ruhl Libre', serif;
-    font-size: clamp(1.5rem, 2vw, 1.7rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
     color: var(--navegation);
     margin-bottom: 1rem;
@@ -540,7 +542,7 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background-color: var(--smart_blue);
+    background-color: var(--navegation);
     padding: 1.5rem;
     overflow: hidden;
     width: 100%;
@@ -621,8 +623,8 @@ img#homepic.diagfirst {
     right: -50%;
     border-radius: 50%;
     border: 2px dashed var(--atomic);
-    width: clamp(10rem, 20vw, 16rem);
-    height: clamp(10rem, 20vw, 16rem);
+    width: clamp(10rem, 25vw, 18rem);
+    height: clamp(10rem, 25vw, 18rem);
     z-index: 1;
 }
 
@@ -632,25 +634,24 @@ img#homepic.diagfirst {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: .8rem;
     border-radius: 50%;
     padding: .6rem;
-    width: clamp(9rem, 20vw, 14rem);
-    height: clamp(9rem, 20vw, 14rem);
+    width: clamp(9rem, 25vw, 14rem);
+    height: clamp(9rem, 25vw, 14rem);
     background-color: var(--atomic);
 }
 
 span#number {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 6vw, 4.5rem);
     font-weight: 700;
 }
 
 span#phrase {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.7rem);
     font-weight: 700;
 }
 
@@ -664,17 +665,38 @@ span#phrase {
         align-items: center;
         width: 100%;
         height: auto;
-
     }
 
     .card-list {
         margin-inline: 0;
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-list .card-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: .8rem;
+        text-align: left;
+        background-color: var(--navegation);
+        border-radius: 20px;
+    }
+
+    .card-list .cta {
+        margin-top: 1rem !important;
+        align-self: center;
     }
 
     .img-right.diagfirst {
         width: 40%;
-        height: 90vh;
+        height: 80vh;
+    }
+
+    .circle-exp{
+        right: -40%;
     }
 
 
@@ -721,7 +743,7 @@ span#phrase {
     background-size: cover;
     background-repeat: no-repeat;
     width: 90%;
-    height: 50vh;
+    height: 60vh;
     z-index: 2;
 }
 
@@ -736,13 +758,12 @@ span#phrase {
     padding-bottom: 3rem;
     z-index: 1;
     position: relative;
-    margin-top: -50%;
+    margin-top: -55%;
     width: 100%;
 }
 
 .fullname h3 {
     color: var(--ligth_bgd);
-
 }
 
 .fullname p {
@@ -844,6 +865,26 @@ img.slide {
         width: 100%;
         height: auto;
     }
+
+    .information .img-left {
+        width: 50%;
+        height: 80vh;
+    }
+
+    .information .fullname {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--atomic);
+        width: 50%;
+        margin: 0;
+        padding-block: 6.5rem;
+
+    }
+
+
 
 }
 
@@ -955,7 +996,7 @@ i#ico {
     font-weight: 600;
 }
 
-.explain{
+.explain {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -986,7 +1027,7 @@ i#ico {
     margin-block: 2rem;
 }
 
-.whyus{
+.whyus {
     display: flex;
     flex-direction: column;
     justify-content: center;
