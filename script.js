@@ -24,3 +24,26 @@ document.addEventListener("click", (e) => {
         }
     }
 });
+
+//Observador para disparar animaciones al entraral viewport
+
+function initViewportAnimations(){
+    const elementos = document.querySelectorAll("[data-anim]");
+    const opciones = {
+        root:null,
+        rootMargin:"0px",
+        threshold:0.15 //ajustable para cuando mostrar la animacion
+    };
+    const observer = new IntersectionObserver ((entradas, obs)=>{
+        entradas.forEach((entrada)=>{
+            if(entrada.isIntersecting){
+                const el = entrada.target;//lee el tipo de animacion desde el HTML
+                const animacion = el.dataset.anim;
+                el.classList.add(animacion); //evita que se repita la animacion al hacer scroll
+                obs.unobserve(el);
+            }
+        });
+    }, opciones);
+    elementos.forEach(el=>observer.observe(el));
+}
+document.addEventListener("DOMContentLoaded", initViewportAnimations);
