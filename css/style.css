@@ -13,6 +13,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor:default;
 }
 
 header {
@@ -124,6 +125,7 @@ video {
 
 .nav-menu li a {
     text-decoration: none;
+    cursor: pointer;
     color: var(--ligth_bgd);
     font-size: 1rem;
     font-weight: 500;
@@ -194,7 +196,7 @@ video {
     }
 
     .nav-menu li a {
-        font-size: 1rem;
+        font-size: clamp(.9rem, 2vw, 1.2rem);
         font-weight: 600;
         color: var(--navegation);
         background: none !important;
@@ -223,6 +225,7 @@ video {
     #menu-icon {
         top: 18%;
         right: 18%;
+        z-index: 1;
     }
 }
 
@@ -265,7 +268,7 @@ video {
 
 .cta button {
     padding: .7rem;
-    font-size: clamp(.9rem, 2vw, 1.5rem);
+    font-size: clamp(.9rem, 2vw, 1.2rem);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--navegation);
     color: var(--ligth_bgd);
@@ -281,7 +284,8 @@ video {
 
 .preview .cta a#btn-contact {
     padding: .6rem;
-    font-size: clamp(.9rem, 2vw, 1.5rem);
+    cursor: pointer;
+    font-size: clamp(.9rem, 2vw, 1.2rem);
     font-family: 'Montserrat', sans-serif;
     color: var(--ligth_bgd);
     border: 2px solid var(--navegation);
@@ -482,11 +486,24 @@ footer p a:hover {
 
 /*Estilos generales de las secciones*/
 
+main{
+     padding-inline: 1rem;
+}
+
 section {
     width: 100%;
     height: auto;
-    padding-inline: 1rem;
     margin-bottom: 5rem;
+}
+
+@media (min-width:768px){
+    main{
+        padding-inline: 2.5rem;
+    }
+
+    section{
+        padding-inline: 3rem;
+    }
 }
 
 h2 {
@@ -577,14 +594,13 @@ h3 {
 
 .cta a#btn-contact {
     color: var(--text_primary);
-    font-weight: 500;
+    cursor: pointer;
     border: 3px solid var(--navegation);
     border-radius: 15px;
     padding: .5rem;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: clamp(.9rem, 2vw, 1.1rem);
+    font-size: clamp(.9rem, 2vw, 1.2rem);
     transition: transform ease-in-out .3s;
 }
 
@@ -624,8 +640,8 @@ img#homepic.diagfirst {
     right: -50%;
     border-radius: 50%;
     border: 2px dashed var(--atomic);
-    width: clamp(10rem, 25vw, 18rem);
-    height: clamp(10rem, 25vw, 18rem);
+    width: clamp(10rem, 25vw, 16rem);
+    height: clamp(10rem, 25vw, 16rem);
     z-index: 1;
 }
 
@@ -697,7 +713,8 @@ span#phrase {
     }
 
     .circle-exp{
-        right: -40%;
+        right: -50%;
+        top: 63%;
     }
 }
 
@@ -824,7 +841,7 @@ span#phrase {
     margin: 0 auto;
     padding: .5rem;
     border-radius: 12%;
-    border: 2px dashed var(--atomic);
+    color: var(--atomic);
 }
 
 .img-rigth-grid .rigth-grid {
@@ -856,6 +873,8 @@ img.slide {
 /*About Section Desktop*/
 
 @media (min-width:768px) {
+    
+    
     .aboutcontainer .information {
         display: flex;
         flex-direction: row;
@@ -863,11 +882,12 @@ img.slide {
         align-items: center;
         width: 100%;
         height: auto;
+        padding-inline: 1.5rem;
     }
 
     .information .img-left {
         width: 50%;
-        height: 80vh;
+        height: 90vh;
     }
 
     .information .fullname {
@@ -878,15 +898,24 @@ img.slide {
         text-align: center;
         background-color: var(--atomic);
         width: 50%;
+        height: 90vh;
         margin: 0;
-        padding-block: 6.5rem;
+        padding: 0;
+
+    }
+
+    .about-section .clients{
+        padding-inline: 1rem;
+       gap: 4rem;
     }
 
     .clients .card-list{
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: start;
+        gap: 1rem;
+        margin-block: 4rem;
     }
 
     .clients .card-list .card-icon{
@@ -894,10 +923,17 @@ img.slide {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color:var(--ligth_bgd);
+        box-shadow: 2px 2px 3px var(--smart_blue);
+
     }
 
     .clients .card-list .card-icon span{
         text-align: center;
+    }
+
+    .aboutcontainer a#btn-contact{
+       display: none;
     }
 
 

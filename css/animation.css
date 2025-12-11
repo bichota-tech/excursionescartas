@@ -6,9 +6,10 @@
     --stamp-speed:.9s;      /* duración de cada animación */
     --slide-ease: ease-out;
     --slide-opacity: 0;
-
     --stagger-step: 0.15s;     /* separación entre elementos */
+    --border-speed: 2s;
 }
+
 
 /* ===========================================
    SISTEMA DE STAGGER AUTOMÁTICO
@@ -124,4 +125,56 @@
         transform: scale(1) rotate(0);
     }
 }
+
+/* ===========================================
+   BORDE QUE SE DIBUJA EN SENTIDO HORARIO
+   =========================================== */
+
+.draw-border {
+    position: relative;
+}
+
+.draw-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px dashed #FF773F;      /* Usa el color del texto */
+    border-radius: inherit;               /* Respeta esquinas redondeadas */
+    
+    /* Técnica de dibujo */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    /* Stroke animado */
+    border-color: transparent;
+    border-top-color: currentColor;
+    border-right-color: currentColor;
+    border-bottom-color: currentColor;
+    border-left-color: currentColor;
+
+    /* Truco del borde "recorriendo" */
+    clip-path: inset(0 0 100% 0);
+
+    animation: drawBorderClockwise var(--border-speed, 1.5s) linear forwards;
+}
+
+@keyframes drawBorderClockwise {
+    0% {
+        clip-path: inset(0 0 100% 0);      /* Empieza en la parte superior */
+    }
+    25% {
+        clip-path: inset(0 0 75% 0);       /* Avanza por la derecha */
+    }
+    50% {
+        clip-path: inset(0 0 50% 0);       /* Baja */
+    }
+    75% {
+        clip-path: inset(0 0 25% 0);       /* Izquierda */
+    }
+    100% {
+        clip-path: inset(0 0 0 0);         /* Completo */
+    }
+}
+
 
