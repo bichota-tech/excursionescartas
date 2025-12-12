@@ -523,13 +523,13 @@ h3 {
     text-align: center;
 }
 
-h4{
+h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(1.1rem, 3vw, 1.3rem);
 }
 
 
-p{
+p {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(.9rem, 2vw, 1.1rem);
 }
@@ -652,8 +652,8 @@ img#homepic.diagfirst {
     right: -50%;
     border-radius: 50%;
     border: 2px dashed var(--atomic);
-    width: clamp(10rem, 25vw, 16rem);
-    height: clamp(10rem, 25vw, 16rem);
+    width: clamp(10rem, 20vw, 13rem);
+    height: clamp(10rem, 20vw, 13rem);
     z-index: 1;
 }
 
@@ -665,22 +665,22 @@ img#homepic.diagfirst {
     text-align: center;
     border-radius: 50%;
     padding: .6rem;
-    width: clamp(9rem, 25vw, 14rem);
-    height: clamp(9rem, 25vw, 14rem);
+    width: clamp(9rem, 20vw, 12rem);
+    height: clamp(9rem, 20vw, 12rem);
     background-color: var(--atomic);
 }
 
 span#number {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
 }
 
 span#phrase {
     color: var(--ligth_bgd);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.7rem);
+    font-size: clamp(1rem, 3vw, 1.3rem);
     font-weight: 700;
 }
 
@@ -696,7 +696,7 @@ span#phrase {
         height: auto;
     }
 
-    .card-list {
+    .homecontainer .card-list {
         margin-inline: 0;
         width: 50%;
         display: flex;
@@ -704,7 +704,7 @@ span#phrase {
         justify-content: center;
     }
 
-    .card-list .card-icon {
+    .homecontainer .card-list .card-icon {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -725,7 +725,7 @@ span#phrase {
     }
 
     .circle-exp {
-        right: -50%;
+        right: -60%;
         top: 63%;
     }
 }
@@ -802,13 +802,13 @@ span#phrase {
 .clients .card-list {
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 1rem;
 }
 
 .clients .card-icon {
@@ -821,8 +821,12 @@ span#phrase {
     gap: 1rem;
     margin: 0;
     padding: 1rem;
+    box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
+    -webkit-box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
+    -moz-box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
     background-color: transparent;
     text-align: left;
+    border-radius: 0 0 40% 0;
 }
 
 .clients .card-icon i {
@@ -836,8 +840,8 @@ span#phrase {
 .clients .card-icon span {
     color: var(--text_primary);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
     font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
 }
 
 .clients .img-rigth-grid {
@@ -933,8 +937,9 @@ img.slide {
         justify-content: center;
         align-items: center;
         background-color: var(--ligth_bgd);
-        box-shadow: 2px 2px 3px var(--smart_blue);
-
+        box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
+        -webkit-box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
+        -moz-box-shadow: 5px 5px 7px -1px rgba(11, 74, 193, 0.75);
     }
 
     .clients .card-list .card-icon span {
@@ -1114,7 +1119,7 @@ i#ico {
     }
 
     .whyus {
-        width: 60%;
+        width: 50%;
     }
 
     div.plane {
@@ -1147,14 +1152,11 @@ i#ico {
         width: 100%;
         height: 100%;
         position: relative;
-
     }
 
-    .explain .cta{
+    .explain .cta {
         margin-block: 2rem !important;
     }
-
-
 
 }
 
@@ -1165,7 +1167,7 @@ i#ico {
 }
 
 .floatbuttom a#whatsapp i {
-    font-size: 2rem;
+    font-size: clamp(2rem, 10vh, 3rem);
     padding: .5rem;
     border-radius: 100%;
     background-color: rgba(0, 128, 0, 0.596);
@@ -1182,7 +1184,7 @@ i#ico {
     color: var(--ligth_bgd);
     border-radius: 50%;
     text-align: center;
-    font-size: 2.3rem;
+    font-size: clamp(2.3rem, 5vh, 3.5rem);
     box-shadow: 2px 2px 3px var(--shadow);
     z-index: 1000;
     display: flex;
